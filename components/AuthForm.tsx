@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import CustomInput from './CustomInput';
-import { authFormSchema } from '@/lib/utils';
+import { authformSchema } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions';
@@ -30,7 +30,7 @@ const AuthForm = ({ type }: { type: string }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const formSchema = authFormSchema(type);
+  const formSchema = authformSchema(type);
 
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
